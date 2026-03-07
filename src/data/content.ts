@@ -1,4 +1,6 @@
 // src/data/content.ts
+// NOTE: All site content is centralized here (Separation of Concerns).
+// To update text or project info, edit only this file.
 
 export type Project = {
     id: string;
@@ -8,6 +10,8 @@ export type Project = {
     approach: string;
     result: string;
     tags: string[];
+    url?: string;       // Primary link (store/marketplace)
+    pressUrl?: string;  // Press / press kit URL
 };
 
 export type Skill = {
@@ -63,9 +67,10 @@ export const content = {
             title: "GlyphBound",
             subtitle: "Picross x Roguelike",
             challenge: "既存ジャンルの融合における「面白さの不確実性」と、個人開発におけるリソース制限。",
-            approach: "コアとなるゲームサイクルを早期にプロトタイピングし、仮説検証を反復。拡張性を考慮したアーキテクチャ設計。",
-            result: "Steamでのリリースを達成し、システム設計からパブリッシングまで一気通貫の開発プロセスを確立。",
+            approach: "コアとなるゲームサイクルを早期にプロトタイピングし、仮説検証を反復。開発開始から10日でデモ版をリリースし、実際のフィードバックを基に拡張。",
+            result: "Steamストアページを開設し、2025年8月の正式リリースを予定。設計からパブリッシングまで一気通貫の開発プロセスを確立。",
             tags: ["Godot", "GDScript", "Game Design"],
+            pressUrl: "https://sites.google.com/view/glyphbound-press/%E3%83%9B%E3%83%BC%E3%83%A0",
         },
         {
             id: "aria",
@@ -73,22 +78,26 @@ export const content = {
             subtitle: "VS Code Extension for AI-Assisted Dev",
             challenge: "AIコーディング支援ツールにおける「プロジェクトの文脈（コンテキスト）が失われる」という構造的課題。",
             approach: "開発者の意図や仕様変更の歴史を保持し、AIに適切なコンテキストを提供する「仕組み」を設計・実装。",
-            result: "AI協働時の手戻りを大幅に削減し、LLMのポテンシャルを最大限に引き出す開発体験を実現。",
-            tags: ["TypeScript", "VS Code API", "LLM", "Ollama"],
+            result: "AI協働時の手戻りを大幅に削減し、LLMのポテンシャルを最大限に引き出す開発体験を実現。VS Code Marketplaceにて公開中。",
+            tags: ["TypeScript", "VS Code API", "LLM"],
+            url: "https://marketplace.visualstudio.com/items?itemName=yonogames.aria-vscode",
         }
     ] as Project[],
     skills: [
         {
+            // 資格・知識ベースの戦略スキル
             category: "Strategy & Analysis",
             items: ["IT Strategist", "Applied Information Technology", "Requirements Definition", "Business Process Modeling"],
         },
         {
-            category: "Application & Engineering",
-            items: ["Next.js", "TypeScript", "Tailwind CSS", "Godot Engine", "Python"],
+            // 直接使用している実装スキル
+            category: "Implementation",
+            items: ["Godot Engine", "GDScript", "kintone App Design Specialist", "Git / GitHub Actions"],
         },
         {
-            category: "AI & Tools",
-            items: ["Ollama", "Prompt Engineering", "kintone App Design Specialist", "Git / GitHub Actions"],
+            // AI協働・設計スキル
+            category: "AI-Native Development",
+            items: ["Prompt Engineering", "Context Management", "AI Workflow Design", "Ollama"],
         }
     ] as Skill[]
 };

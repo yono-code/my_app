@@ -1,7 +1,7 @@
 import { content } from "@/data/content"
 import { Card, CardTitle } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
-import { CheckCircle2, Target, Wrench } from "lucide-react"
+import { CheckCircle2, Target, Wrench, ExternalLink, NewspaperIcon } from "lucide-react"
 
 export function Projects() {
     return (
@@ -23,10 +23,37 @@ export function Projects() {
                                         <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
                                         <p className="text-accent font-medium mb-6">{project.subtitle}</p>
                                     </div>
-                                    <div className="flex flex-wrap gap-2 mt-4">
-                                        {project.tags.map((tag) => (
-                                            <Badge key={tag} variant="outline" className="bg-background/50">{tag}</Badge>
-                                        ))}
+                                    <div className="space-y-4">
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.tags.map((tag) => (
+                                                <Badge key={tag} variant="outline" className="bg-background/50">{tag}</Badge>
+                                            ))}
+                                        </div>
+                                        {/* External links */}
+                                        <div className="flex flex-col gap-2 pt-2">
+                                            {project.url && (
+                                                <a
+                                                    href={project.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-blue-300 transition-colors"
+                                                >
+                                                    <ExternalLink className="w-4 h-4" />
+                                                    View on Marketplace
+                                                </a>
+                                            )}
+                                            {project.pressUrl && (
+                                                <a
+                                                    href={project.pressUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-foreground transition-colors"
+                                                >
+                                                    <NewspaperIcon className="w-4 h-4" />
+                                                    Press Kit
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
 
