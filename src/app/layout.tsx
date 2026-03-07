@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Github, Twitter, Mail } from "lucide-react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,9 +35,42 @@ export default function RootLayout({
           {children}
         </div>
 
-        {/* Minimal Footer */}
-        <footer className="py-8 text-center border-t border-white/5 bg-primary/20">
-          <p className="text-sm text-muted">© {new Date().getFullYear()} Portfolio. All rights reserved.</p>
+        {/* Footer */}
+        <footer className="py-10 text-center border-t border-white/5 bg-primary/20">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-5">
+            {/* Social Links */}
+            <div className="flex items-center gap-6">
+              <a
+                href="https://github.com/yono-code"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="flex items-center gap-2 text-muted hover:text-accent transition-colors duration-200 group"
+              >
+                <Github className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-sm hidden sm:inline">GitHub</span>
+              </a>
+              <a
+                href="https://x.com/yonogames1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+                className="flex items-center gap-2 text-muted hover:text-accent transition-colors duration-200 group"
+              >
+                <Twitter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-sm hidden sm:inline">X (Twitter)</span>
+              </a>
+              <a
+                href="mailto:yonogames.dev@gmail.com"
+                aria-label="Contact"
+                className="flex items-center gap-2 text-muted hover:text-accent transition-colors duration-200 group"
+              >
+                <Mail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-sm hidden sm:inline">yonogames.dev@gmail.com</span>
+              </a>
+            </div>
+            <p className="text-xs text-muted/60">© {new Date().getFullYear()} Portfolio. All rights reserved.</p>
+          </div>
         </footer>
       </body>
     </html>
