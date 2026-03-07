@@ -87,12 +87,12 @@ export const content = {
         {
             // 資格・知識ベースの戦略スキル
             category: "Strategy & Analysis",
-            items: ["IT Strategist", "Applied Information Technology", "Requirements Definition", "Business Process Modeling"],
+            items: ["Applied Information Technology", "Requirements Definition", "Business Process Modeling"],
         },
         {
-            // 直接使用している実装スキル
+            // 直接保有・実務で使用しているスキル
             category: "Implementation",
-            items: ["Godot Engine", "GDScript", "kintone App Design Specialist", "Git / GitHub Actions"],
+            items: ["kintone App Design Specialist", "kintone Customization Specialist", "Git / GitHub Actions"],
         },
         {
             // AI協働・設計スキル
