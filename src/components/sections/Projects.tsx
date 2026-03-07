@@ -1,7 +1,7 @@
 import { content } from "@/data/content"
 import { Card, CardTitle } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
-import { CheckCircle2, Target, Wrench, ExternalLink, NewspaperIcon } from "lucide-react"
+import { CheckCircle2, Target, Wrench, ExternalLink } from "lucide-react"
 
 export function Projects() {
     return (
@@ -20,40 +20,26 @@ export function Projects() {
                             <div className="flex flex-col md:flex-row">
                                 <div className="p-8 md:w-1/3 min-w-[300px] border-b md:border-b-0 md:border-r border-white/10 bg-gradient-to-br from-primary/30 to-background flex flex-col justify-between">
                                     <div>
-                                        <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
+                                        {/* Title — links to primary URL (marketplace/store) or press kit */}
+                                        {(project.url || project.pressUrl) ? (
+                                            <a
+                                                href={project.url ?? project.pressUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="group inline-flex items-center gap-2 hover:text-accent transition-colors"
+                                            >
+                                                <CardTitle className="text-2xl mb-2 group-hover:text-accent transition-colors">{project.title}</CardTitle>
+                                                <ExternalLink className="w-4 h-4 mb-1 text-muted group-hover:text-accent opacity-70" />
+                                            </a>
+                                        ) : (
+                                            <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
+                                        )}
                                         <p className="text-accent font-medium mb-6">{project.subtitle}</p>
                                     </div>
-                                    <div className="space-y-4">
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tags.map((tag) => (
-                                                <Badge key={tag} variant="outline" className="bg-background/50">{tag}</Badge>
-                                            ))}
-                                        </div>
-                                        {/* External links */}
-                                        <div className="flex flex-col gap-2 pt-2">
-                                            {project.url && (
-                                                <a
-                                                    href={project.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-blue-300 transition-colors"
-                                                >
-                                                    <ExternalLink className="w-4 h-4" />
-                                                    View on Marketplace
-                                                </a>
-                                            )}
-                                            {project.pressUrl && (
-                                                <a
-                                                    href={project.pressUrl}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-foreground transition-colors"
-                                                >
-                                                    <NewspaperIcon className="w-4 h-4" />
-                                                    Press Kit
-                                                </a>
-                                            )}
-                                        </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tags.map((tag) => (
+                                            <Badge key={tag} variant="outline" className="bg-background/50">{tag}</Badge>
+                                        ))}
                                     </div>
                                 </div>
 
