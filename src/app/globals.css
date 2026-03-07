@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #111827; /* Charcoal Grey (Gray 900) */
+  --color-foreground: #f8fafc; /* Slate 50 */
+  --color-primary: #0f172a; /* Deep Navy (Slate 900) */
+  --color-accent: #3b82f6; /* Intellectual Blue (Blue 500) */
+  --color-card: #1e293b; /* Card Background (Slate 800) */
+  --color-card-foreground: #f8fafc;
+  --color-muted: #94a3b8; /* Muted text (Slate 400) */
+}
+
+/* Base styles focused on modern and dynamic look */
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
