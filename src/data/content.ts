@@ -92,7 +92,7 @@ export const content = {
         {
             // 直接保有・実務で使用しているスキル
             category: "Implementation",
-            items: ["kintone App Design Specialist", "kintone Customization Specialist", "Git / GitHub Actions"],
+            items: ["kintone App Design Specialist", "kintone Customization Specialist", "Power BI", "Power Apps", "Power Automate", "Git / GitHub Actions"],
         },
         {
             // AI協働・設計スキル
