@@ -1,7 +1,7 @@
 import { content } from "@/data/content"
 import { Card, CardTitle } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
-import { CheckCircle2, Target, Wrench, ExternalLink } from "lucide-react"
+import { CheckCircle2, Target, Wrench, ExternalLink, Calendar } from "lucide-react"
 
 export function Projects() {
     return (
@@ -28,12 +28,17 @@ export function Projects() {
                                                 rel="noopener noreferrer"
                                                 className="group inline-flex items-center gap-2 hover:text-accent transition-colors"
                                             >
-                                                <CardTitle className="text-2xl mb-2 group-hover:text-accent transition-colors">{project.title}</CardTitle>
-                                                <ExternalLink className="w-4 h-4 mb-1 text-muted group-hover:text-accent opacity-70" />
+                                                <CardTitle className="text-2xl mb-1 group-hover:text-accent transition-colors">{project.title}</CardTitle>
+                                                <ExternalLink className="w-4 h-4 mb-0.5 text-muted group-hover:text-accent opacity-70" />
                                             </a>
                                         ) : (
-                                            <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
+                                            <CardTitle className="text-2xl mb-1">{project.title}</CardTitle>
                                         )}
+                                        {/* Period */}
+                                        <p className="flex items-center gap-1.5 text-xs text-muted mb-4">
+                                            <Calendar className="w-3.5 h-3.5" />
+                                            {project.period}
+                                        </p>
                                         <p className="text-accent font-medium mb-6">{project.subtitle}</p>
                                     </div>
                                     <div className="flex flex-wrap gap-2">

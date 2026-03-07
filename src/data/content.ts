@@ -6,12 +6,13 @@ export type Project = {
     id: string;
     title: string;
     subtitle: string;
+    period: string;        // 開発期間
     challenge: string;
     approach: string;
     result: string;
     tags: string[];
-    url?: string;       // Primary link (store/marketplace)
-    pressUrl?: string;  // Press / press kit URL
+    url?: string;
+    pressUrl?: string;
 };
 
 export type Skill = {
@@ -66,6 +67,7 @@ export const content = {
             id: "glyphbound",
             title: "GlyphBound",
             subtitle: "Picross x Roguelike",
+            period: "2026/01/03 〜 2026/08（リリース予定）",
             challenge: "既存ジャンルの融合における「面白さの不確実性」と、個人開発におけるリソース制限。",
             approach: "コアとなるゲームサイクルを早期にプロトタイピングし、仮説検証を反復。開発開始から10日でデモ版をリリースし、実際のフィードバックを基に拡張。",
             result: "Steamストアページを開設し、2025年8月の正式リリースを予定。設計からパブリッシングまで一気通貫の開発プロセスを確立。",
@@ -74,8 +76,9 @@ export const content = {
         },
         {
             id: "aria",
-            title: "ARIA",
+            title: "Brain Connector ARIA",
             subtitle: "VS Code Extension for AI-Assisted Dev",
+            period: "2026/02/22 〜 2026/03/02（リリース済）",
             challenge: "AIコーディング支援ツールにおける「プロジェクトの文脈（コンテキスト）が失われる」という構造的課題。",
             approach: "開発者の意図や仕様変更の歴史を保持し、AIに適切なコンテキストを提供する「仕組み」を設計・実装。",
             result: "AI協働時の手戻りを大幅に削減し、LLMのポテンシャルを最大限に引き出す開発体験を実現。VS Code Marketplaceにて公開中。",
