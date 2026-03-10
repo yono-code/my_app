@@ -35,7 +35,7 @@ export const content = {
     },
     philosophy: {
         title: "Philosophy",
-        statement: "AI協働時代の開発プロセスにおいて、文脈の断絶こそが最大のボトルネックです。私の役割は、経営の戦略・現場の業務要件・AIエンジニアリングを繋ぎ、曖昧な構想から具体的な実装までの道筋を構造化することにあります。",
+        statement: "AI協働開発では、文脈の断絶が最大のボトルネックになります。私の役割は、経営の戦略・現場の業務要件・AIエンジニアリングを繋ぎ、曖昧な構想から具体的な実装までの道筋を構造化することにあります。",
     },
     competencies: [
         {
@@ -71,7 +71,7 @@ export const content = {
             period: "2026/01/03 〜 2026/08（リリース予定）",
             challenge: "既存ジャンルの融合における「面白さの不確実性」と、個人開発におけるリソース制限。",
             approach: "コアとなるゲームサイクルを早期にプロトタイピングし、仮説検証を反復。開発開始から10日でデモ版をリリースし、実際のフィードバックを基に拡張。",
-            keyInsight: "個人開発では早期プロトタイピングが不確実性を最も減らす。完成より仮説検証の速度が成功を決まる。",
+            keyInsight: "個人開発では早期プロトタイピングが不確実性を最も減らす。完成よりも仮説検証の速度が重要になる。",
             result: "Steamストアページを開設し、2026年8月の正式リリースを予定。設計からパブリッシングまで一気通貫の開発プロセスを確立。",
             tags: ["Godot", "GDScript", "Game Design"],
             pressUrl: "https://sites.google.com/view/glyphbound-press/%E3%83%9B%E3%83%BC%E3%83%A0",
@@ -83,38 +83,22 @@ export const content = {
             period: "2026/02/22 〜 2026/03/02（リリース済）",
             challenge: "AIコーディング支援ツールにおける「プロジェクトの文脈（コンテキスト）が失われる」という構造的課題。",
             approach: "開発者の意図や仕様変更の歴史を保持し、AIに適切なコンテキストを提供する「仕組み」を設計・実装。",
-            keyInsight: "AIの能力を制限するのはモデル性能ではなく、与えられるコンテキストの質と構造だ。",
+            keyInsight: "AIの能力はモデル性能だけでなく、与えられるコンテキストの質と構造に大きく左右される。",
             result: "AI協働時に失われやすい仕様・意図・変更履歴を一元管理できる仕組みを実装。VS Code Marketplaceにてリリース。",
             tags: ["TypeScript", "VS Code API", "LLM"],
             url: "https://marketplace.visualstudio.com/items?itemName=yonogames.aria-vscode",
         },
-        {
-            id: "workflow-structuring",
-            title: "Workflow Structuring Tool",
-            subtitle: "AI Collaboration Process Design",
-            period: "2026/02（設計・構築）",
-            challenge: "AI駆動開発が普及するほど、タスクの粒度・文脈管理・役割分担が属人化し、チームや個人の生産性にばらつきが生じる。",
-            approach: "開発フローを構造化・言語化し、AIとの協働ワークフローを再現可能な形式に落とし込む設計手法を確立。タスク分解・コンテキスト引き継ぎ・成果検証の3フェーズに標準化。",
-            keyInsight: "ツールより先に思考フレームを設計すると、ツールの選択も活用効率も大きく変わる。",
-            result: "個人開発において複数プロジェクトを並行管理できる体制を構築。設計思想をARIAのコンテキスト管理機能へ応用し、ワークフローとツールを接続。",
-            tags: ["Process Design", "AI Workflow", "Documentation"],
-        }
     ] as Project[],
     skills: [
         {
             // 資格・知識ベースの戦略スキル
             category: "Strategy & Analysis",
-            items: ["Applied Information Technology", "Requirements Definition", "Business Process Modeling"],
-        },
-        {
-            // 業務改善・BPR
-            category: "Business Process",
-            items: ["Business Process Modeling", "Workflow Automation", "DX Consulting", "Issue Structuring"],
+            items: ["Applied Information Technology", "Requirements Definition", "Business Process Modeling", "Issue Structuring"],
         },
         {
             // 直接保有・実務で使用しているスキル
             category: "Implementation",
-            items: ["kintone App Design Specialist", "kintone Customization Specialist", "Power BI", "Power Apps", "Power Automate", "Git / GitHub Actions"],
+            items: ["kintone", "Power BI", "Power Apps", "Power Automate", "Git / GitHub Actions"],
         },
         {
             // AI協働・設計スキル

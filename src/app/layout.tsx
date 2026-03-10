@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Github, Twitter, Mail } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -57,16 +57,6 @@ export default function RootLayout({
               >
                 <Mail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                 <span className="text-sm hidden sm:inline">yonogames.dev@gmail.com</span>
-              </a>
-              <a
-                href="https://x.com/yonogames1"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="X (Twitter)"
-                className="flex items-center gap-2 text-muted hover:text-accent transition-colors duration-200 group"
-              >
-                <Twitter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-                <span className="text-sm hidden sm:inline">X (Twitter)</span>
               </a>
             </div>
             <p className="text-xs text-muted/60">© {new Date().getFullYear()} Portfolio. All rights reserved.</p>

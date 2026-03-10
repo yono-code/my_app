@@ -11,7 +11,7 @@ export function Skills() {
                 </p>
             </div>
 
-            <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-12 md:grid-cols-3">
                 {content.skills.map((skillGroup) => (
                     <div key={skillGroup.category} className="space-y-6">
                         <h3 className="text-xl font-semibold border-b border-white/10 pb-3 text-accent">{skillGroup.category}</h3>

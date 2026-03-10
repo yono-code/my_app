@@ -15,16 +15,6 @@ export function Hero() {
                     </span>
                 </h1>
 
-                {/* Role Tagline */}
-                <div className="flex flex-wrap justify-center gap-2 pt-2">
-                    {["Business", "Technology", "AI"].map((tag, i) => (
-                        <span key={tag} className="flex items-center gap-2">
-                            <span className="text-sm font-semibold tracking-widest text-accent/80 uppercase">{tag}</span>
-                            {i < 2 && <span className="text-muted/40 text-sm">×</span>}
-                        </span>
-                    ))}
-                </div>
-
                 <p className="mx-auto max-w-2xl text-lg text-muted md:text-xl leading-relaxed">
                     {content.hero.sub}
                 </p>
