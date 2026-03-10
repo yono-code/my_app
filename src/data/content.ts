@@ -70,7 +70,7 @@ export const content = {
             period: "2026/01/03 〜 2026/08（リリース予定）",
             challenge: "既存ジャンルの融合における「面白さの不確実性」と、個人開発におけるリソース制限。",
             approach: "コアとなるゲームサイクルを早期にプロトタイピングし、仮説検証を反復。開発開始から10日でデモ版をリリースし、実際のフィードバックを基に拡張。",
-            result: "Steamストアページを開設し、2025年8月の正式リリースを予定。設計からパブリッシングまで一気通貫の開発プロセスを確立。",
+            result: "Steamストアページを開設し、2026年8月の正式リリースを予定。設計からパブリッシングまで一気通貫の開発プロセスを確立。",
             tags: ["Godot", "GDScript", "Game Design"],
             pressUrl: "https://sites.google.com/view/glyphbound-press/%E3%83%9B%E3%83%BC%E3%83%A0",
         },
@@ -81,9 +81,19 @@ export const content = {
             period: "2026/02/22 〜 2026/03/02（リリース済）",
             challenge: "AIコーディング支援ツールにおける「プロジェクトの文脈（コンテキスト）が失われる」という構造的課題。",
             approach: "開発者の意図や仕様変更の歴史を保持し、AIに適切なコンテキストを提供する「仕組み」を設計・実装。",
-            result: "AI協働時の手戻りを大幅に削減し、LLMのポテンシャルを最大限に引き出す開発体験を実現。VS Code Marketplaceにて公開中。",
+            result: "AI協働時に失われやすい仕様・意図・変更履歴を一元管理できる仕組みを実装。VS Code Marketplaceにてリリース。",
             tags: ["TypeScript", "VS Code API", "LLM"],
             url: "https://marketplace.visualstudio.com/items?itemName=yonogames.aria-vscode",
+        },
+        {
+            id: "workflow-structuring",
+            title: "Workflow Structuring Tool",
+            subtitle: "AI Collaboration Process Design",
+            period: "2026/02（設計・構築）",
+            challenge: "AI駆動開発が普及するほど、タスクの粒度・文脈管理・役割分担が属人化し、チームや個人の生産性にばらつきが生じる。",
+            approach: "開発フローを構造化・言語化し、AIとの協働ワークフローを再現可能な形式に落とし込む設計手法を確立。タスク分解・コンテキスト引き継ぎ・成果検証の3フェーズに標準化。",
+            result: "個人開発において複数プロジェクトを並行管理できる体制を構築。設計思想をARIAのコンテキスト管理機能へ応用し、ワークフローとツールを接続。",
+            tags: ["Process Design", "AI Workflow", "Documentation"],
         }
     ] as Project[],
     skills: [
@@ -99,8 +109,8 @@ export const content = {
         },
         {
             // AI協働・設計スキル
-            category: "AI-Native Development",
-            items: ["Prompt Engineering", "Context Management", "AI Workflow Design", "Ollama"],
+            category: "AI-Assisted Development",
+            items: ["Prompt Engineering", "Context Management", "Workflow Design", "Ollama"],
         }
     ] as Skill[]
 };

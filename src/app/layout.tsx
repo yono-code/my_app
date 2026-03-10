@@ -51,6 +51,14 @@ export default function RootLayout({
                 <span className="text-sm hidden sm:inline">GitHub</span>
               </a>
               <a
+                href="mailto:yonogames.dev@gmail.com"
+                aria-label="Contact"
+                className="flex items-center gap-2 text-muted hover:text-accent transition-colors duration-200 group"
+              >
+                <Mail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-sm hidden sm:inline">yonogames.dev@gmail.com</span>
+              </a>
+              <a
                 href="https://x.com/yonogames1"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -59,14 +67,6 @@ export default function RootLayout({
               >
                 <Twitter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                 <span className="text-sm hidden sm:inline">X (Twitter)</span>
-              </a>
-              <a
-                href="mailto:yonogames.dev@gmail.com"
-                aria-label="Contact"
-                className="flex items-center gap-2 text-muted hover:text-accent transition-colors duration-200 group"
-              >
-                <Mail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-                <span className="text-sm hidden sm:inline">yonogames.dev@gmail.com</span>
               </a>
             </div>
             <p className="text-xs text-muted/60">© {new Date().getFullYear()} Portfolio. All rights reserved.</p>
