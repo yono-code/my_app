@@ -70,6 +70,7 @@ export default function RootLayout({
               </a>
             </div>
             <p className="text-xs text-muted/60">© {new Date().getFullYear()} Portfolio. All rights reserved.</p>
+            <p className="text-xs text-muted/40">Built with Next.js · Deployed on GitHub Pages</p>
           </div>
         </footer>
       </body>

@@ -9,6 +9,7 @@ export type Project = {
     period: string;        // 開発期間
     challenge: string;
     approach: string;
+    keyInsight?: string;   // 思考力を示す一行洞察
     result: string;
     tags: string[];
     url?: string;
@@ -40,25 +41,25 @@ export const content = {
         {
             id: "structuring",
             title: "Requirements Structuring",
-            description: "曖昧な要件を実装可能な単位まで分解・整理し、チーム全体が迷わず進めるロードマップを構築します。",
+            description: "曖昧な課題を実装可能な要件へ構造化",
             icon: "Network",
         },
         {
             id: "integration",
             title: "Business-Tech Integration",
-            description: "業務フローとデータ活用を深く理解し、ビジネスの成果に直結するシステム設計とIT戦略を立案します。",
+            description: "業務フローを深く理解し、成果直結の設計を立案",
             icon: "Building2",
         },
         {
             id: "ai-workflow",
             title: "AI-Native Workflow",
-            description: "AI駆動の開発において、プロンプトの設計からコンテキストの管理まで、次世代の開発プロセスを仕組み化します。",
+            description: "AI協働プロセスを仕組みとして設計・標準化",
             icon: "Bot",
         },
         {
             id: "execution",
             title: "Proven Execution",
-            description: "企画から公開まで、ゼロイチの不確実性を突破してプロダクトを完遂する力を持っています。",
+            description: "構想からリリースまで、ゼロイチを完遂する実行力",
             icon: "Rocket",
         }
     ] as Competency[],
@@ -70,6 +71,7 @@ export const content = {
             period: "2026/01/03 〜 2026/08（リリース予定）",
             challenge: "既存ジャンルの融合における「面白さの不確実性」と、個人開発におけるリソース制限。",
             approach: "コアとなるゲームサイクルを早期にプロトタイピングし、仮説検証を反復。開発開始から10日でデモ版をリリースし、実際のフィードバックを基に拡張。",
+            keyInsight: "個人開発では早期プロトタイピングが不確実性を最も減らす。完成より仮説検証の速度が成功を決まる。",
             result: "Steamストアページを開設し、2026年8月の正式リリースを予定。設計からパブリッシングまで一気通貫の開発プロセスを確立。",
             tags: ["Godot", "GDScript", "Game Design"],
             pressUrl: "https://sites.google.com/view/glyphbound-press/%E3%83%9B%E3%83%BC%E3%83%A0",
@@ -81,6 +83,7 @@ export const content = {
             period: "2026/02/22 〜 2026/03/02（リリース済）",
             challenge: "AIコーディング支援ツールにおける「プロジェクトの文脈（コンテキスト）が失われる」という構造的課題。",
             approach: "開発者の意図や仕様変更の歴史を保持し、AIに適切なコンテキストを提供する「仕組み」を設計・実装。",
+            keyInsight: "AIの能力を制限するのはモデル性能ではなく、与えられるコンテキストの質と構造だ。",
             result: "AI協働時に失われやすい仕様・意図・変更履歴を一元管理できる仕組みを実装。VS Code Marketplaceにてリリース。",
             tags: ["TypeScript", "VS Code API", "LLM"],
             url: "https://marketplace.visualstudio.com/items?itemName=yonogames.aria-vscode",
@@ -92,6 +95,7 @@ export const content = {
             period: "2026/02（設計・構築）",
             challenge: "AI駆動開発が普及するほど、タスクの粒度・文脈管理・役割分担が属人化し、チームや個人の生産性にばらつきが生じる。",
             approach: "開発フローを構造化・言語化し、AIとの協働ワークフローを再現可能な形式に落とし込む設計手法を確立。タスク分解・コンテキスト引き継ぎ・成果検証の3フェーズに標準化。",
+            keyInsight: "ツールより先に思考フレームを設計すると、ツールの選択も活用効率も大きく変わる。",
             result: "個人開発において複数プロジェクトを並行管理できる体制を構築。設計思想をARIAのコンテキスト管理機能へ応用し、ワークフローとツールを接続。",
             tags: ["Process Design", "AI Workflow", "Documentation"],
         }
@@ -101,6 +105,11 @@ export const content = {
             // 資格・知識ベースの戦略スキル
             category: "Strategy & Analysis",
             items: ["Applied Information Technology", "Requirements Definition", "Business Process Modeling"],
+        },
+        {
+            // 業務改善・BPR
+            category: "Business Process",
+            items: ["Business Process Modeling", "Workflow Automation", "DX Consulting", "Issue Structuring"],
         },
         {
             // 直接保有・実務で使用しているスキル

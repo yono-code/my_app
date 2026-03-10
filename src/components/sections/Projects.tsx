@@ -63,6 +63,16 @@ export function Projects() {
                                         <p className="text-foreground/90 leading-relaxed pl-6 border-l-2 border-accent/30">{project.approach}</p>
                                     </div>
 
+                                    {project.keyInsight && (
+                                        <div className="rounded-lg bg-amber-500/5 border border-amber-500/20 px-5 py-3 flex items-start gap-3">
+                                            <span className="text-amber-400 text-base mt-0.5">💡</span>
+                                            <div>
+                                                <span className="text-xs font-bold text-amber-400/80 uppercase tracking-wider">Key Insight</span>
+                                                <p className="text-sm text-foreground/80 mt-1 leading-relaxed italic">{project.keyInsight}</p>
+                                            </div>
+                                        </div>
+                                    )}
+
                                     <div className="space-y-3">
                                         <h4 className="flex items-center text-sm font-bold text-muted uppercase tracking-wider">
                                             <CheckCircle2 className="w-4 h-4 mr-2 text-emerald-400" /> Result (実装成果)
