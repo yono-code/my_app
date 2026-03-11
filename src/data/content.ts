@@ -35,7 +35,7 @@ export const content = {
     },
     philosophy: {
         title: "Philosophy",
-        statement: "AI協働開発では、文脈の断絶が最大のボトルネックになります。私の役割は、経営の戦略・現場の業務要件・AIエンジニアリングを繋ぎ、曖昧な構想から具体的な実装までの道筋を構造化することにあります。",
+        statement: "AI協働開発では、文脈の断絶が大きなボトルネックになりやすいと考えています。私の役割は、経営の戦略・現場の業務要件・AIエンジニアリングを繋ぎ、曖昧な構想から具体的な実装までの道筋を構造化することにあります。",
     },
     competencies: [
         {
@@ -71,7 +71,7 @@ export const content = {
             period: "2026/01/03 〜 2026/08（リリース予定）",
             challenge: "既存ジャンルの融合における「面白さの不確実性」と、個人開発におけるリソース制限。",
             approach: "コアとなるゲームサイクルを早期にプロトタイピングし、仮説検証を反復。開発開始から10日でデモ版をリリースし、実際のフィードバックを基に拡張。",
-            keyInsight: "個人開発では早期プロトタイピングが不確実性を最も減らす。完成よりも仮説検証の速度が重要になる。",
+            keyInsight: "個人開発では、早期プロトタイピングが不確実性を減らす有効な手段になる。",
             result: "Steamストアページを開設し、2026年8月の正式リリースを予定。設計からパブリッシングまで一気通貫の開発プロセスを確立。",
             tags: ["Godot", "GDScript", "Game Design"],
             pressUrl: "https://sites.google.com/view/glyphbound-press/%E3%83%9B%E3%83%BC%E3%83%A0",
@@ -84,7 +84,7 @@ export const content = {
             challenge: "AIコーディング支援ツールにおける「プロジェクトの文脈（コンテキスト）が失われる」という構造的課題。",
             approach: "開発者の意図や仕様変更の歴史を保持し、AIに適切なコンテキストを提供する「仕組み」を設計・実装。",
             keyInsight: "AIの能力はモデル性能だけでなく、与えられるコンテキストの質と構造に大きく左右される。",
-            result: "AI協働時に失われやすい仕様・意図・変更履歴を一元管理できる仕組みを実装。VS Code Marketplaceにてリリース。",
+            result: "AI協働時に失われやすい仕様・意図・変更履歴を一元管理できる仕組みを実装。VS Code Marketplaceにて公開。",
             tags: ["TypeScript", "VS Code API", "LLM"],
             url: "https://marketplace.visualstudio.com/items?itemName=yonogames.aria-vscode",
         },
@@ -97,7 +97,7 @@ export const content = {
         },
         {
             // 直接保有・実務で使用しているスキル
-            category: "Implementation",
+            category: "Technology",
             items: ["kintone", "Power BI", "Power Apps", "Power Automate", "Git / GitHub Actions"],
         },
         {
